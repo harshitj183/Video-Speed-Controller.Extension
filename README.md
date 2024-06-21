@@ -2,7 +2,7 @@
 
 ## Description
 
-The Video Speed Controller Chrome Extension allows you to control the playback speed of videos on web pages. It provides a simple interface to set custom speeds or choose from preset speeds.
+The Video Speed Controller C Extension allows you to control the playback speed of videos on web pages. It provides a simple interface to set custom speeds or choose from preset speeds.
 
 ## Features
 
