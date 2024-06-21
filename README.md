@@ -15,3 +15,4 @@ The Video Speed Controller C Extension allows you to control the playback speed 
 ## Installation
 
 1. Clone or download this repository.
+<!--   https://chatgpt.com/c/2e277a1f-a805-4da2-a2aa-f9c293f17cf9 -->
