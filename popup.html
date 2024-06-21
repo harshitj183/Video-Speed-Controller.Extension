@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Speed Controller</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+      color: #333333;
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      color: #0078d4;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input:focus, button:focus {
+      outline: none;
+      border-color: #0078d4;
+      box-shadow: 0 0 3px rgba(0, 120, 212, 0.3);
+    }
+    button {
+      background-color: #0078d4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    button:hover {
+      background-color: #005a9e;
+    }
+    .preset-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .preset-buttons button {
+      flex: 1 1 calc(33.33% - 10px);
+      margin: 5px 0;
+    }
+    .feedback {
+      color: #0078d4;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+      min-height: 20px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h3>Video Speed Controller</h3>
+  <div class="section speed-input">
+    <input type="number" id="speed" placeholder="Set Speed (e.g., 1.0)" step="0.1" />
+    <button id="setSpeed">Set Speed</button>
+  </div>
+  <div class="section preset-buttons">
+    <button data-speed="0.5">0.5x</button>
+    <button data-speed="1.0">1.0x</button>
+    <button data-speed="1.5">1.5x</button>
+    <button data-speed="2.0">2.0x</button>
+    <button data-speed="2.5">2.5x</button>
+    <button data-speed="3.0">3.0x</button>
+  </div>
+  <div class="section default-speed">
+    <input type="number" id="defaultSpeed" placeholder="Default Speed (e.g., 1.0)" step="0.1" />
+    <button id="setDefaultSpeed">Set Default</button>
+    <button id="resetDefaultSpeed" style="background-color: #ff6b6b;">Reset to Default</button>
+  </div>
+  <p id="currentSpeed" style="text-align: center;">Current Speed: N/A</p>
+  <div id="feedback" class="feedback"></div>
+  <script src="popup.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    /* CSS styles */
+    #badgeContainer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: flex-end; /* Align at the bottom */
+      z-index: 1000;
+    }
+
+    #badge_843219 {
+      display: flex;
+      align-items: center;
+      padding: 2px;
+      background-color: #4285f4;
+      border: 1px solid #4285f4;
+      border-radius: 3px;
+      font-size: 10px;
+      color: #fff;
+      width: auto; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    #logo_982134 {
+      width: 50px;
+      height: 50px;
+      border-radius: 25%;
+      border: 2px solid #fff;
+      border-bottom: 2px solid #4285f4;
+      border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #logo_982134:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    #text_654321 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 10px; /* Adjust as needed */
+    }
+
+    #partner_765432 {
+      color: #fff;
+      font-weight: bold;
+      display: block;
+    }
+
+    #fullName_987654 {
+      display: none;
+    }
+
+    #developedByText_456789 {
+      display: block;
+    }
+
+    #badge_843219:hover #developedByText_456789 {
+      display: none;
+    }
+
+    #badge_843219:hover #fullName_987654 {
+      display: block;
+    }
+
+    @keyframes trending {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+
+  <!-- Badge Container -->
+  <div id="badgeContainer">
+    <!-- Badge (Wrapped with anchor tag for redirection) -->
+    <a href="https://harshitj183.eu.org/profile" target="_blank" rel="noopener noreferrer">
+      <div id="badge_843219" class="badge_219843">
+        <!-- Logo -->
+        <img id="logo_982134" class="logo_412983" src="https://cdn.githubraw.com/harshitj183/harshitj183/main/badge/profileLOgo.png" alt="Google logo">
+        <!-- Text -->
+        <div id="text_654321" class="text_123654">
+          <!-- Partner -->
+          <span id="partner_765432" class="partner_345678">@harshitj183</span>
+          <!-- Full Name -->
+          <span id="fullName_987654" class="full-name_567890">Harshit Jaiswal</span>
+          <!-- Developed By Text -->
+          <span id="developedByText_456789" class="developed-by-text_890123">Developed by</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    // JavaScript to append styles dynamically
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+      /* Additional styles go here */
+    `;
+    document.head.appendChild(styleSheet);
+  </script>
+ 
+</body>
+</html>
