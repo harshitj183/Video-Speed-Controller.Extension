@@ -4,26 +4,46 @@
   <meta charset="UTF-8">
   <title>Video Speed Controller</title>
   <style>
+    :root {
+      --primary-100: #4285f4;
+      --primary-200: #002fa7;
+      --primary-300: #dffffd;
+      --accent-100: #8a2be2;
+      --accent-200: #ccccff;
+      --text-100: #1f305e;
+      --text-200: #4d598c;
+      --bg-100: #d7e8f9;
+      --bg-200: #afdbf5;
+      --bg-300: #191970;
+    }
+
+   
+
     body {
       width: 300px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Google Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       padding: 20px;
       margin: 0;
-      color: #333333;
-      background-color: #ffffff;
-      border: 1px solid #e1e1e1;
+      color: var(--text-100);
+      background-color: var(--bg-100);
+      border: 1px solid var(--bg-200);
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
     }
+
     h3 {
-      color: #0078d4;
+      color: var(--primary-100);
       margin-bottom: 20px;
       text-align: center;
     }
+
     .section {
       margin-bottom: 20px;
     }
-    input, button {
+
+    input,
+    button {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -31,40 +51,54 @@
       font-size: 16px;
       width: 100%;
       box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    input:focus, button:focus {
+
+    input:focus,
+    button:focus {
       outline: none;
-      border-color: #0078d4;
-      box-shadow: 0 0 3px rgba(0, 120, 212, 0.3);
+      border-color: var(--primary-100);
+      box-shadow: 0 0 3px rgba(66, 133, 244, 0.3);
     }
+
     button {
-      background-color: #0078d4;
+      background-color: var(--primary-100);
       color: white;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out, box-shadow 0.2s;
     }
+
     button:hover {
-      background-color: #005a9e;
+      background-color: var(--primary-200);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+
     .preset-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
     }
+
     .preset-buttons button {
       flex: 1 1 calc(33.33% - 10px);
       margin: 5px 0;
     }
+
     .feedback {
-      color: #0078d4;
+      color: var(--primary-100);
       font-size: 14px;
       margin-top: 10px;
       text-align: center;
       min-height: 20px;
+      transition: color 0.3s;
     }
+
     .error {
       color: red;
     }
+
+    
+ 
   </style>
 </head>
 <body>
