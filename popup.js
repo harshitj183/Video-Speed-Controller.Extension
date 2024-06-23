@@ -87,6 +87,22 @@ document.getElementById('speed').addEventListener('input', () => {
   }
 });
 
+//set speed can't be less than 0.1
+document.getElementById('speed').addEventListener('input', () => {
+  const speed = parseFloat(document.getElementById('speed').value);
+  if (!isNaN(speed) && speed < 0.1) {
+    document.getElementById('speed').value = 0.1;
+  }
+});
+
+//default speed can't be less than 0.1
+document.getElementById('defaultSpeed').addEventListener('input', () => {
+  const defaultSpeed = parseFloat(document.getElementById('defaultSpeed').value);
+  if (!isNaN(defaultSpeed) && defaultSpeed < 0.1) {
+    document.getElementById('defaultSpeed').value = 0.1;
+  }
+});
+
 // Apply default speed when popup opens
 applyDefaultSpeed();
 
